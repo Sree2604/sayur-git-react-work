@@ -3,28 +3,28 @@ import { useState } from 'react'
 import './App.css'
 
 
-function Parent (){
-  const [children, setChildren] = useState([1,2,3])
+function ItemHold (){
+  const [buttonChild, setButtonChildren] = useState([1,2,3])
 
-function removeChild(removeId){
-  setChildren(children.filter((id)=> id!== removeId))
+function removeButton(removeId){
+  setButtonChildren(buttonChild.filter((id)=> id!== removeId))
 }
 
   return (
     <div>
       <h1> have fun</h1>
-      {children.map((id)=>(
-        <Child key={id} id={id} remove={removeChild} />
+      {buttonChild.map((id)=>(
+        <Item key={id} id={id} remove={removeButton} />
       ))}
     </div>
   )
       }
 
 
-function Child ({remove, id}){
+function Item ({remove, id}){
   return(
     <div>
-      <button onClick={remove}>Click to remove me. id: {id}</button>
+      <button onClick={remove}>Fix me. id: {id}</button>
     </div>
   )
 }
@@ -35,7 +35,7 @@ function App() {
   return (
     <>
    <div>
-    <Parent />
+    <ItemHold/>
    </div>
     </>
   )
