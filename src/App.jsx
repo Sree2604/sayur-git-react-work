@@ -6,8 +6,8 @@ import './App.css'
 function Parent (){
   const [children, setChildren] = useState([1,2,3])
 
-function removeChild(removeid){
-  setChildren(children.filter(id))
+function removeChild(removeId){
+  setChildren(children.filter((id)=> id!== removeId))
 }
 
   return (
