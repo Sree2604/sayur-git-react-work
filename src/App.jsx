@@ -14,7 +14,7 @@ function removeButton(removeId){
     <div>
       <h1> have fun</h1>
       {buttonChild.map((id)=>(
-        <Item key={id} id={id} remove={()=>removeButton(id)} />
+        <Item key={id} id={id} remove={removeId} />
       ))}
     </div>
   )
