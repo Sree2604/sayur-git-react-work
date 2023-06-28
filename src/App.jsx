@@ -18,6 +18,7 @@ function removeChild(removeId){
       ))}
     </div>
   )
+      }
 
 
 function Child ({remove, id}){
@@ -33,7 +34,9 @@ function App() {
 
   return (
     <>
-   
+   <div>
+    <Parent />
+   </div>
     </>
   )
 }
